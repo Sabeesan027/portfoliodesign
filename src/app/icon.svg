@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <polygon points="10,2 62,2 62,54 54,62 2,62 2,10" fill="#070709" stroke="#00F0FF" stroke-width="2.5"/>
+  <path d="M12 12H18M12 12V18M52 52H46M52 52V46" stroke="#FF4D00" stroke-width="2.5" stroke-linecap="square"/>
+  <text x="32" y="40" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, monospace" font-size="24" font-weight="800" letter-spacing="1">GS</text>
+</svg>
