@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --color-ember-500: #ff4d00;
+  --color-ember-400: #ff9500;
+  --color-ember-300: #ffb800;
+  --color-cyber-cyan: #00f0ff;
+  --color-cyber-crimson: #ff003c;
+  --color-obsidian: #070709;
+  --color-void: #030305;
+}
+
+@layer base {
+  html {
+    background-color: #070709;
+    color: #f8fafc;
+    scroll-behavior: auto;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(255, 77, 0, 0.35);
+    color: #ffffff;
+  }
+}
+
+/* ============================================================================
+   CHAMFERED ARMOR CLIP-PATH UTILITIES (Transformers / Iron Man Geometry)
+   ============================================================================ */
+.clip-chamfer-sm {
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%,
+    0 10px
+  );
+}
+
+.clip-chamfer-md {
+  clip-path: polygon(
+    18px 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%,
+    0 18px
+  );
+}
+
+.clip-chamfer-lg {
+  clip-path: polygon(
+    28px 0,
+    100% 0,
+    100% calc(100% - 28px),
+    calc(100% - 28px) 100%,
+    0 100%,
+    0 28px
+  );
+}
+
+/* 6-Plate Transformers Interlocking Armor Fracture Polygons (Act III) */
+.clip-plate-tl {
+  clip-path: polygon(0 0, 52% 0, 48% 36%, 0 32%);
+}
+.clip-plate-tr {
+  clip-path: polygon(52% 0, 100% 0, 100% 34%, 48% 36%);
+}
+.clip-plate-ml {
+  clip-path: polygon(0 32%, 48% 36%, 50% 66%, 0 68%);
+}
+.clip-plate-mr {
+  clip-path: polygon(48% 36%, 100% 34%, 100% 66%, 50% 66%);
+}
+.clip-plate-bl {
+  clip-path: polygon(0 68%, 50% 66%, 46% 100%, 0 100%);
+}
+.clip-plate-br {
+  clip-path: polygon(50% 66%, 100% 66%, 100% 100%, 46% 100%);
+}
+
+/* ============================================================================
+   RADIAL VIGNETTE COMPOSITING MASK (Vivid Center Artwork + Seamless Edges)
+   ============================================================================ */
+.bg-radial-vignette {
+  mask-image: radial-gradient(circle at center, black 45%, transparent 96%);
+  -webkit-mask-image: radial-gradient(circle at center, black 45%, transparent 96%);
+}
+
+/* ============================================================================
+   ARCHITECTURAL & TACTICAL GRIDS
+   ============================================================================ */
+.bg-grid-light {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+}
+
+.bg-grid-dark {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+}
+
+.bg-grid-cyber {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.065) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.065) 1px, transparent 1px);
+}
+
+.bg-radar-grid {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.09) 0%, transparent 55%),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      transparent 0,
+      transparent 78px,
+      rgba(0, 240, 255, 0.06) 79px,
+      transparent 80px
+    ),
+    linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+}
+
+/* ============================================================================
+   CRT SCANLINES, JARVIS LASER SCAN & METALLIC SHEEN
+   ============================================================================ */
+.crt-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.22) 0px,
+    rgba(0, 0, 0, 0.22) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+@keyframes jarvis-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(420%);
+    opacity: 0;
+  }
+}
+
+.group:hover .jarvis-laser-sweep {
+  animation: jarvis-scan 1.5s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 26s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 18s linear infinite;
+}
+
+/* ============================================================================
+   NEON GLOW, MOLTEN BORDER & HELLFIRE BLOOM UTILITIES
+   ============================================================================ */
+.neon-text-cyan {
+  text-shadow:
+    0 0 8px rgba(0, 240, 255, 0.6),
+    0 0 24px rgba(0, 240, 255, 0.35);
+}
+
+.neon-text-crimson {
+  text-shadow:
+    0 0 8px rgba(255, 0, 60, 0.65),
+    0 0 24px rgba(255, 0, 60, 0.35);
+}
+
+.neon-text-ember {
+  text-shadow:
+    0 0 10px rgba(255, 77, 0, 0.75),
+    0 0 28px rgba(255, 149, 0, 0.5);
+}
+
+.neon-outline-display {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 240, 255, 0.85);
+  text-shadow:
+    0 0 20px rgba(0, 240, 255, 0.48),
+    0 0 46px rgba(255, 0, 60, 0.32);
+}
+
+@keyframes molten-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.molten-border-animated {
+  background: linear-gradient(
+    115deg,
+    #ff4d00,
+    #ffb800,
+    #d4af37,
+    #ff2a00,
+    #ff9500,
+    #ff4d00
+  );
+  background-size: 300% 300%;
+  animation: molten-flow 4.2s ease infinite;
+}
+
+/* ============================================================================
+   3D RETRO-FUTURISTIC SYNTHWAVE / CYBERPUNK NEON FLOOR GRID (FOOTER)
+   ============================================================================ */
+.cyber-horizon-stage {
+  perspective: 480px;
+  overflow: hidden;
+}
+
+.cyber-horizon-grid {
+  position: absolute;
+  inset: -12% -65% -20% -65%;
+  transform: rotateX(65deg);
+  transform-origin: center top;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 60, 0.42) 1px, transparent 1px);
+  background-size: 52px 52px;
+  animation: horizon-scroll 9s linear infinite;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.9) 24%,
+    black 72%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.9) 24%,
+    black 72%,
+    transparent 100%
+  );
+}
+
+@keyframes horizon-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 52px;
+  }
+}
+
+/* ============================================================================
+   KINETIC GLITCH & EMBER ANIMATIONS
+   ============================================================================ */
+@keyframes glitch-jitter {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    transform: translate(2px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+}
+
+.glitch-hover:hover {
+  animation: glitch-jitter 0.24s steps(2, end) 2;
+}
+
+@keyframes ember-pulse {
+  0%, 100% {
+    opacity: 0.72;
+    filter: drop-shadow(0 0 10px rgba(255, 77, 0, 0.75));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(255, 184, 0, 0.95));
+  }
+}
+
+.animate-ember-pulse {
+  animation: ember-pulse 2.2s ease-in-out infinite;
+}
+
+/* ============================================================================
+   REDUCED MOTION SUPPORT
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .cyber-horizon-grid,
+  .animate-ember-pulse,
+  .molten-border-animated,
+  .animate-spin-slow,
+  .animate-spin-slow-reverse,
+  .group:hover .jarvis-laser-sweep,
+  .glitch-hover:hover {
+    animation: none !important;
+  }
+}
