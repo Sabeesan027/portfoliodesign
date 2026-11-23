@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 2116 >> stream
+BT
+/F1 10 Tf
+50 760 Td
+14 TL
+(GNANAVEL SABEESAN \(G. SABEESAN\)) Tj T*
+(Full-Stack Software Engineer | Cybersecurity Researcher | Co-Founder & CEO, UltraKerb) Tj T*
+(Location: Jaffna, Sri Lanka | Email: sabeesan@ultrakerb.com) Tj T*
+(--------------------------------------------------------------------------------) Tj T*
+(EXPERIENCE) Tj T*
+(Co-Founder & Lead Full-Stack Developer - UltraKerb \(Nov 2025 - Present\)) Tj T*
+(- Full SDLC ownership across enterprise web platforms, custom POS software, and mobile apps.) Tj T*
+(- Delivered commercial systems for SS Group of Companies and AST Constructions Pvt Ltd.) Tj T*
+(--------------------------------------------------------------------------------) Tj T*
+(FLAGSHIP PRODUCTION SYSTEMS) Tj T*
+(1. SaleSphere - POS & Billing Engine \(Live\): React \(Vite\), Django REST, PostgreSQL,) Tj T*
+(   Nginx, Web Bluetooth ESC/POS 80mm thermal printing, atomic stock reconciliation.) Tj T*
+(2. Construction Inventory & QR Tool Tracker \(Live\): TypeScript, React, Django,) Tj T*
+(   PostgreSQL, multi-site resource tracking, end-to-end type safety, live dashboards.) Tj T*
+(3. Mobile GPS & Routing Engine: React Native, Kalman-Filter Smoothing, OSRM &) Tj T*
+(   OpenRouteService APIs, 36 unit tests, EAS CI/CD, 10k/mo API free-tier optimization.) Tj T*
+(--------------------------------------------------------------------------------) Tj T*
+(CYBERSECURITY RESEARCH) Tj T*
+(Context-Aware Middleware for BOLA \(Broken Object Level Authorization\) Mitigation) Tj T*
+(in RESTful APIs - Zero-Trust API Hardening, RBAC, Linux VPS & Nginx Defense.) Tj T*
+(--------------------------------------------------------------------------------) Tj T*
+(EDUCATION & CERTIFICATIONS) Tj T*
+(- BSc \(Hons\) in Software Engineering - University of Bedfordshire \(SLIIT Northern UNI\)) Tj T*
+(  Coursework Completed: Sep 2026) Tj T*
+(- Higher Diploma in Information Technology \(HDIT\) - SLIIT City UNI \(2024 - 2025\)) Tj T*
+(- Certifications: Career Essentials in Cybersecurity \(Microsoft & LinkedIn\),) Tj T*
+(  The Cybersecurity Threat Landscape, Python \(Basic\) - HackerRank.) Tj T*
+ET
+endstream endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Courier >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002409 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2477
+%%EOF
